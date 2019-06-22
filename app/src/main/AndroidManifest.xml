@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.vimalinc.palmcalc2019.palmcalc"
+    android:installLocation="auto"
+    android:versionCode="7"
+    android:versionName="3.0.3">
+
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <supports-screens
+        android:anyDensity="true"
+        android:smallScreens="false"
+        android:normalScreens="true"
+        android:largeScreens="true"
+        android:resizeable="true"
+        android:xlargeScreens="true"
+        android:requiresSmallestWidthDp="536" />
+
+
+    <application
+        android:icon="@drawable/palm_icon"
+        android:label="@string/app_name"
+        tools:ignore="GoogleAppIndexingWarning"
+        android:theme="@style/Theme.AppCompat.Light.DarkActionBar">
+        <activity
+            android:name="com.vimalinc.palmcalc2019.palmcalc.PalmCalcActivity"
+            android:configChanges="orientation"
+            android:label="@string/app_name"
+            >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name="com.vimalinc.palmcalc2019.palmcalc.UserSettingActivity" />
+        <activity android:name="com.vimalinc.palmcalc2019.clock.AddTimeZone" />
+        <activity
+            android:name="com.vimalinc.palmcalc2019.scientific.Demoscreen"
+            android:theme="@style/Transparent" />
+
+    </application>
+
+</manifest>
